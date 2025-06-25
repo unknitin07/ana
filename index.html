@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jalwa Predictions</title>
+  <style>
+    :root {
+      --primary: #000;
+      --accent: #ff3c3c;
+      --text: #fff;
+      --muted: #999;
+      --font: 'Inter', sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font);
+      background-color: var(--primary);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    p.description {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+    .cta-button {
+      background-color: var(--accent);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(255, 60, 60, 0.4);
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #cc2f2f;
+      transform: translateY(-2px);
+    }
+    .timer {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #f1c40f;
+    }
+    .testimonials {
+      margin-top: 40px;
+      max-width: 480px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .testimonials p {
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.75rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>If Loss, All Refund.</h1>
+  <p class="description">
+    Join our exclusive Telegram community where top-tier predictions meet full trust.<br />
+    No win? 100% refund. Simple.
+  </p>
+  <button class="cta-button" onclick="window.location.href='https://t.me/+3poNDpTXn0lhMjM9'">Join Now</button>
+  <div class="timer" id="countdown">Next prediction drops in: 00:00</div>
+
+  <div class="testimonials">
+    <p>“Won ₹4,500 in one tip. Unreal!” – Rahul</p>
+    <p>“Free tips work too. Legit!” – Tushar</p>
+    <p>“Refund was instant. Fully trusted.” – Mohit</p>
+  </div>
+
+  <footer>
+    Predictions are for educational purposes only. Refunds subject to terms.
+  </footer>
+
+  <script>
+    function startCountdown(seconds) {
+      const countdownEl = document.getElementById('countdown');
+      function update() {
+        const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+        const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+        const secs = String(seconds % 60).padStart(2, '0');
+        countdownEl.textContent = `Next prediction drops in: ${hrs}:${mins}:${secs}`;
+        seconds--;
+        if (seconds < 0) seconds = 7200; // Restart every 2 hrs
+      }
+      update();
+      setInterval(update, 1000);
+    }
+    startCountdown(7200);
+  </script>
+</body>
+</html>
