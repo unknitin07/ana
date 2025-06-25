@@ -35,16 +35,11 @@ body {
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-/* Optional: If using image logo instead of text */
-.card img.logo {
-  width: 120px;
+/* Logo image replaces emoji */
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
   margin-bottom: 20px;
 }
 
