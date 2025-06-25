@@ -35,12 +35,25 @@ body {
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 }
 
-/* Logo image replaces emoji */
+/* LOGO + TEXT SIDE BY SIDE */
+.logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-  margin-bottom: 20px;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 h1 {
@@ -97,24 +110,4 @@ footer {
   font-size: 0.75rem;
   color: #777;
   text-align: center;
-}
-
-.logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.logo-img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: 8px;
-  color: var(--accent);
 }
