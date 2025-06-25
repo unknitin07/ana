@@ -1,6 +1,6 @@
 :root {
   --primary: #000;
-  --accent: #ff3c3c;
+--accent: #3366cc;
   --text: #fff;
   --muted: #aaa;
   --card-bg: #111;
@@ -51,8 +51,8 @@ body {
 }
 
 .logo-text {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 900;
   color: var(--accent);
 }
 
